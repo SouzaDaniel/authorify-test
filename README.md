@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+## Technologies
+This app use [React.js](https://reactjs.org) and [TypeScript](https://www.typescriptlang.org) by [CRA](https://create-react-app.dev) template.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Steps to build and run the app
 
-## Available Scripts
+### Cloning app
+To init this tutorial, you need to have this repository on your machine and for it, you can run the command:
 
-In the project directory, you can run:
+```bash
+git clone git@github.com:SouzaDaniel/authorify-test.git
+```
+or
+```bash
+git clone https://github.com/SouzaDaniel/authorify-test.git
+```
 
-### `yarn start`
+### Installing dependencies
+We also need external packages that are hosted and made available by NPM. To install them, already inside your project directory, run:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm install
+```
+or
+```bash
+yarn install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To find out which dependencies we have, you can access the `package.json` file.
 
-### `yarn test`
+### Environment variables
+In our application, we use external services, for the database (MongoDB) and for the static file storage (Firebase) and because of this, we need to define environment variables to make it possible to read these values and make connections when building and running the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Copy and paste the `.env.example` file and rename it to `.env.local`, following this command:
 
-### `yarn build`
+```bash
+cp .env.example .env.local
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After that, fill the fields with the correct values.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Build and run (local)
+You can build and run your application directly from your setup, by running the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run start
+```
+or
+```bash
+yarn start
+```
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you want to deploy this app, you can use the [CRA doc](https://create-react-app.dev/docs/deployment).
