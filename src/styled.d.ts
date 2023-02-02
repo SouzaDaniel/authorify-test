@@ -19,6 +19,7 @@ declare module 'styled-components' {
       fast: string;
     };
     breakpoint: {
+      mobile: string;
       tablet: string;
       desktop: string;
     };

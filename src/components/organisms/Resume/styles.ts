@@ -13,9 +13,13 @@ const show = keyframes`
 export const Container = styled.div`
   display: flex;
 
-  column-gap: 1rem;
+  gap: 0.5rem 1rem;
 
   animation: ${show} ${({ theme }) => theme.transition.slow};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 export const Avatar = styled.img`
@@ -25,6 +29,11 @@ export const Avatar = styled.img`
   object-fit: cover;
 
   flex-shrink: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const Details = styled.div`

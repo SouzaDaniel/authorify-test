@@ -57,9 +57,13 @@ export const DropzoneDescription = styled.p`
 export const Actions = styled.div`
   display: flex;
   flex-direction: row;
-  column-gap: 8px;
+  gap: 8px;
 
   button {
     flex: 1;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+    flex-direction: column;
   }
 `;
