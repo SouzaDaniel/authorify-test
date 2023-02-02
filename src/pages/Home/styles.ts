@@ -72,10 +72,14 @@ export const Container = styled.div<ContainerProps>`
 
     position: absolute;
     z-index: 1000;
-    box-shadow: 0 0 var(--box-gap) var(--box-gap)
-      ${({ theme }) => rgb(theme.color.secondary).darken(0.5).alpha(0.1).hexa()};
 
     transition: all ${({ theme }) => theme.transition.slow};
+
+    @media (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+      box-shadow: 0 0 var(--box-gap) var(--box-gap)
+        ${({ theme }) =>
+          rgb(theme.color.secondary).darken(0.5).alpha(0.1).hexa()};
+    }
 
     ${({ stage }) =>
       stage === 'INFO' &&
