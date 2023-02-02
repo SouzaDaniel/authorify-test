@@ -31,6 +31,7 @@ export const Details = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+  flex: 1;
 
   min-width: 0;
 `;
