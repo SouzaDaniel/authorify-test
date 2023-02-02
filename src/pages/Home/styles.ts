@@ -98,8 +98,11 @@ export const Container = styled.div<ContainerProps>`
     ${({ stage }) =>
       stage === 'SUCCESS' &&
       css`
-        left: var(--box-gap);
-        right: var(--box-gap);
+        left: 0;
+        right: 0;
+
+        height: 100vh;
+        border-radius: 0;
       `}
   }
 
